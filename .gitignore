@@ -1,2 +1,7 @@
 mvnw.cmd
 mvnw
+/.idea
+.env
+src/.DS_Store
+.DS_Store
+target/

@@ -1,10 +1,8 @@
 package com.bdb.api.katas.business.Impl;
 
 import com.bdb.api.katas.business.JuryBusiness;
-import com.bdb.api.katas.dto.app.BuildResponseDTO;
 import com.bdb.api.katas.dto.app.HeadersDTO;
 import com.bdb.api.katas.dto.JurieDTO;
-import com.bdb.api.katas.enums.BusinessCodeEnums;
 import com.bdb.api.katas.services.JuryService;
 import com.bdb.api.katas.utils.Validations;
 import lombok.RequiredArgsConstructor;
@@ -29,13 +27,8 @@ public class JuryBusinessImpl implements JuryBusiness {
         Validations.handleInvalidHeaders(headers);
         LOGGER.info("Start get all juries with Rquid : [{}]", headers.getUid());
         List<JurieDTO> juryList = null;
-        try {
-            juryList = juryService.getAllJuries();
-        } catch (Exception ex) {
-            BuildResponseDTO.throwException(BusinessCodeEnums.JURIES_ERROR, headers.getUid());
-        }
+        juryList = juryService.getAllJuries();
         return juryList;
-
     }
 
     @Override

@@ -7,6 +7,10 @@ public enum BusinessCodeEnums {
     JURY(201, "B-002KT", "Jurado creado exitosamente"),
     JURIES_ERROR(500, "T-001KT", "Error genérico del servidor"),
 
+    // Participants
+    PARTICIPANTS(200, "B-003KT", "Lista de participantes retornada exitosamente"),
+    PARTICIPANT(201, "B-004KT", "Participante creado exitosamente"),
+
     //APP
     BAD_REQUEST_HEADERS(403, "T-004KT", "No autorizado, headers incompletos o con información erronea."),
     DATABASE_EXCEPTION(500, "T-002KT", "Problemas de persistencia en la base de datos"),

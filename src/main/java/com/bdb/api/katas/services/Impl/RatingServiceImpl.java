@@ -49,4 +49,9 @@ public class RatingServiceImpl implements RatingService {
             }
         return allRatings ;
     }
+
+    @Override
+    public void updateRatingState() {
+        ratingRepository.updateAllRatings();
+    }
 }

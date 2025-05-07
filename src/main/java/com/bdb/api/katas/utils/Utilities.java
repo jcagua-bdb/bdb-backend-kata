@@ -1,5 +1,6 @@
 package com.bdb.api.katas.utils;
 
+import com.bdb.api.katas.dto.app.ConfluenceRatingDTO;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -35,5 +36,23 @@ public class Utilities {
             return "**********";
         }
         return stringValue.substring(0, stringValue.length() - 10) + "****";
+    }
+
+    public static String buildHtmlTableRegisterConfluence(List<ConfluenceRatingDTO> participantDTOListList) {
+        StringBuilder html = new StringBuilder();
+        html.append("<table><thead><tr>")
+                .append("<th>Nombre</th><th>Promedio</th><th>Aprobado</th><th>Posición</th>")
+                .append("</tr></thead><tbody>");
+
+        for ( ConfluenceRatingDTO p : participantDTOListList) {
+            html.append("<tr>")
+                    .append("<td>").append(p.getName()).append("</td>")
+                    .append("<td>").append(p.getAverage()).append("</td>")
+                    .append("<td>").append(p.isApproved() ? "✅" : "❌").append("</td>")
+                    .append("<td>").append(p.getPosition()).append("</td>")
+                    .append("</tr>");
+        }
+        html.append("</tbody></table>");
+        return html.toString();
     }
 }

@@ -13,4 +13,6 @@ public interface RatingService {
     public RatingRequestDTO saveRating(RatingRequestDTO ratingRequestDTO, HeadersDTO headers);
 
     public List<RatingEntity> getAllRatingsActive(HeadersDTO headers);
+
+    public void updateRatingState();
 }

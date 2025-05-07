@@ -16,9 +16,13 @@ public enum BusinessCodeEnums {
     JURY_OR_PARTICIPANT_NOT_EXISTS(404, "B-006KT", "El jurado o el participante no existe con los IDs dados "),
     RATINGS_NULL(404, "B-006KT", "No hay registros de calificaciones para el jurado o el participante dado"),
     RATINGS_BY_SCORE(200, "B-007KT", "Lista de calificaciones retornada exitosamente"),
+
+    //CONFLUENCE
+    REGISTER(201, "B-008KT", "Registro exitoso en Confluence"),
+    ERROR_REGISTER(500, "T-003KT", "Error al registrar en Confluence"),
     //APP
     BAD_REQUEST_HEADERS(403, "T-004KT", "No autorizado, headers incompletos o con información erronea."),
-    DATABASE_EXCEPTION(500, "T-002KT", "Problemas de persistencia en la base de datos"),
+    DATABASE_EXCEPTION(500, "T-002KT", "Server Error"),
     BAD_REQUEST(400, "T-003KT", "Los datos enviados en la solicitud no cumplen con la definición del API");
 
     private Integer httpStatus;

@@ -4,7 +4,6 @@ import com.bdb.api.katas.business.RatingBusiness;
 import com.bdb.api.katas.dto.RatingRequestDTO;
 import com.bdb.api.katas.dto.RatingResponseDTO;
 import com.bdb.api.katas.dto.app.HeadersDTO;
-import com.bdb.api.katas.entity.ParticipantEntity;
 import com.bdb.api.katas.entity.RatingEntity;
 import com.bdb.api.katas.services.RatingService;
 import com.bdb.api.katas.utils.Validations;
@@ -15,8 +14,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import java.util.*;
-import java.util.stream.Collectors;
-
 @Component
 @Slf4j
 @RequiredArgsConstructor

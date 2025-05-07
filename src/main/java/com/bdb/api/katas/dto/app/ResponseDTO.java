@@ -15,8 +15,4 @@ public class ResponseDTO {
         this.data = data;
         this.meta = meta;
     }
-
-    public ResponseDTO(int statusCode, MetaDTO meta){
-        this.meta = meta;
-    }
 }

@@ -7,6 +7,7 @@ import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
+import java.util.List;
 
 @Getter
 @Setter
@@ -30,6 +31,9 @@ public class JuryEntity {
     @Column(name = "fecha_registro")
     @CreationTimestamp
     private ZonedDateTime createdOn;
+
+    @OneToMany(mappedBy = "jury")
+    private List<RatingEntity> ratings;
 
     @PrePersist
     @PreUpdate

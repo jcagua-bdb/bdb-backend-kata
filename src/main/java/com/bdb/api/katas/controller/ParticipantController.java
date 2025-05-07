@@ -1,7 +1,6 @@
 package com.bdb.api.katas.controller;
 
 import com.bdb.api.katas.business.ParticipantBusiness;
-import com.bdb.api.katas.dto.JurieDTO;
 import com.bdb.api.katas.dto.ParticipantDTO;
 import com.bdb.api.katas.dto.app.BuildResponseDTO;
 import com.bdb.api.katas.dto.app.HeadersDTO;
